@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Nu0HVrxOj47FqlTe9AonlXRQqjVOIdlRzpD8XGxvjDmVxkJscas7W1ZhkgqzF9qd3AT3D25ocpgPBZHZV7vgzg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Stanisław\\Desktop\\DrawMath 2.0\\DrawMath 2.0\\DrawMath 2.0.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Stanisław\\.nuget\\packages\\mathparser.org-mxparser\\5.0.7\\mathparser.org-mxparser.5.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}
