@@ -5,10 +5,14 @@
       "MathParser.org-mXparser/5.0.7": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp31/MathParser.org-mXparser.dll": {}
+          "lib/netcoreapp31/MathParser.org-mXparser.dll": {
+            "related": ".deps.json"
+          }
         },
         "runtime": {
-          "lib/netcoreapp31/MathParser.org-mXparser.dll": {}
+          "lib/netcoreapp31/MathParser.org-mXparser.dll": {
+            "related": ".deps.json"
+          }
         }
       }
     }
@@ -84,28 +88,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Stanisław\\.nuget\\packages\\": {},
-    "F:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\kamil\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stanisław\\Desktop\\DrawMath 2.0\\DrawMath 2.0\\DrawMath 2.0.csproj",
+      "projectUniqueName": "C:\\Users\\kamil\\source\\repos\\DrawMath2_0\\DrawMath 2.0\\DrawMath 2.0\\DrawMath 2.0.csproj",
       "projectName": "DrawMath 2.0",
-      "projectPath": "C:\\Users\\Stanisław\\Desktop\\DrawMath 2.0\\DrawMath 2.0\\DrawMath 2.0.csproj",
-      "packagesPath": "C:\\Users\\Stanisław\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stanisław\\Desktop\\DrawMath 2.0\\DrawMath 2.0\\obj\\",
+      "projectPath": "C:\\Users\\kamil\\source\\repos\\DrawMath2_0\\DrawMath 2.0\\DrawMath 2.0\\DrawMath 2.0.csproj",
+      "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kamil\\Source\\Repos\\DrawMath2_0\\DrawMath 2.0\\DrawMath 2.0\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "F:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Stanisław\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -141,7 +137,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -153,7 +150,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

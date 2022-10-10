@@ -291,5 +291,10 @@ namespace DrawMath_2._0
             }
             return sentence;
         }
+
+        private void txtMonotPrzedzial_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

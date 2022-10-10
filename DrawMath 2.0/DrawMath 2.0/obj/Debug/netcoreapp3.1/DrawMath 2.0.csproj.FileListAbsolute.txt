@@ -16,3 +16,22 @@ C:\Users\Stanisław\Desktop\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\Dr
 C:\Users\Stanisław\Desktop\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.genruntimeconfig.cache
 C:\Users\Stanisław\Desktop\DrawMath 2.0\DrawMath 2.0\bin\Debug\netcoreapp3.1\MathParser.org-mXparser.dll
 C:\Users\Stanisław\Desktop\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.csproj.CopyComplete
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\bin\Debug\netcoreapp3.1\DrawMath 2.0.exe
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\bin\Debug\netcoreapp3.1\DrawMath 2.0.deps.json
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\bin\Debug\netcoreapp3.1\DrawMath 2.0.runtimeconfig.json
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\bin\Debug\netcoreapp3.1\DrawMath 2.0.runtimeconfig.dev.json
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\bin\Debug\netcoreapp3.1\DrawMath 2.0.dll
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\bin\Debug\netcoreapp3.1\DrawMath 2.0.pdb
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\bin\Debug\netcoreapp3.1\MathParser.org-mXparser.dll
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.csproj.AssemblyReference.cache
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath_2._0.Form1.resources
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.csproj.GenerateResource.cache
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.AssemblyInfoInputs.cache
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.AssemblyInfo.cs
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.csproj.CoreCompileInputs.cache
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.csproj.CopyComplete
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.dll
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.pdb
+C:\Users\kamil\source\repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.genruntimeconfig.cache
+C:\Users\kamil\Source\Repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath_2._0.Properties.Resources.resources
