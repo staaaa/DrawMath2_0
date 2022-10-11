@@ -71,7 +71,17 @@ namespace DrawMath
                 //MALEJACA
                 if (countExpression(input, i) > countExpression(input, i + 0.1))
                 {
+                    double x = 0;
+                    x = countExpression(input, i);
                     monot = 3;
+                }
+            }
+            for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
+            {
+                //MALEJACA
+                if (countExpression(input, i) > countExpression(input, i + 0.1) || countExpression(input, i) < countExpression(input, i + 0.1))
+                {
+                    monot = 0;
                 }
             }
             return monot;

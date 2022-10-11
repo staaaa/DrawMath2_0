@@ -31,36 +31,31 @@ namespace DrawMath_2._0
         private void btnDraw_Click(object sender, EventArgs e)
         {
             double[] przedzial = { -10, 10};
-            double[] przedzialMonot = { double.Parse(txtBoxMonot1.Text), double.Parse(txtBoxMonot2.Text) };
-            double punktGranica = double.Parse(txtBoxGranica.Text);
+            double[] przedzialMonot;
+            double punktGranica;
             double dokladnosc = 0;
+            Bitmap bmp = new Bitmap(fBox.Width, fBox.Height);
+            Graphics grap = Graphics.FromImage(bmp);
+            PointF point1 = new PointF();
+            PointF point2 = new PointF();
+            Dictionary<double, double> Points = new Dictionary<double, double>();
+            PointF point11 = new PointF();
+            PointF point22 = new PointF();
+            double j = przedzial[0];
+            double k = 10;
+
+            CheckTextbox();
+            punktGranica = double.Parse(txtBoxGranica.Text);
+            przedzialMonot = new double[] { double.Parse(txtBoxMonot1.Text), double.Parse(txtBoxMonot2.Text) };
 
             MessageBox.Show("Trwa rysowanie wykresu. Proszę czekać.", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             label6.Text = convertString(txtBoxInput.Text);
             f1.SetInput(label6.Text);
 
-            Bitmap bmp = new Bitmap(fBox.Width, fBox.Height);
-            Graphics grap = Graphics.FromImage(bmp);
-
             //setup
-            grap.FillRectangle(whiteBrush, new Rectangle(0, 0, 500, 500));
-            double j = przedzial[0];
-            double k = 10;
-            for (int i = 0; i <= 501; i += 25)
-            {
-                grap.DrawLine(blackThin, i, 255, i, 245);
-                grap.DrawLine(blackThin, 245, i, 255, i);
+            grap.FillRectangle(whiteBrush, new Rectangle(0, 0, 506, 506));
+            DrawPoints(j, k, grap);
 
-                grap.DrawString(j.ToString(), new Font("Calibri", 6), blackBrush, i - 2, 265);
-                grap.DrawString(k.ToString(), new Font("Calibri", 6), blackBrush, 235, i - 2);
-                j++;
-                k--;
-            }
-
-            PointF point1 = new PointF();
-            PointF point2 = new PointF();
-
-            Dictionary<double, double> Points = new Dictionary<double, double>();
             if (BoxDokladnosc.SelectedIndex == 0)
             {
                 Points = f1.Evaluate(1f, przedzial);
@@ -77,8 +72,6 @@ namespace DrawMath_2._0
                 dokladnosc = 0.01f;
             }
 
-            PointF point11 = new PointF();
-            PointF point22 = new PointF();
             point11.X = 250;
             point11.Y = 0;
             point22.X = 250;
@@ -308,6 +301,37 @@ namespace DrawMath_2._0
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+        private void CheckTextbox()
+        {
+            if (txtBoxMonot1.Text == "")
+            {
+                MessageBox.Show("Brak wartości dla pola Monotoniczność!");
+                txtBoxMonot1.Text = "0";
+            }
+            if (txtBoxMonot2.Text == "")
+            {
+                MessageBox.Show("Brak wartości dla pola Ekstrema!");
+                txtBoxMonot2.Text = "0";
+            }
+            if (txtBoxGranica.Text == "")
+            {
+                MessageBox.Show("Brak wartości dla pola Granica!");
+                txtBoxGranica.Text = "0";
+            }
+        }
+        private void DrawPoints(double j, double k, Graphics grap)
+        {
+            for (int i = 0; i <= 501; i += 25)
+            {
+                grap.DrawLine(blackThin, i, 255, i, 245);
+                grap.DrawLine(blackThin, 245, i, 255, i);
+
+                grap.DrawString(j.ToString(), new Font("Calibri", 6), blackBrush, i - 2, 265);
+                grap.DrawString(k.ToString(), new Font("Calibri", 6), blackBrush, 235, i - 2);
+                j++;
+                k--;
+            }
         }
     }
 }

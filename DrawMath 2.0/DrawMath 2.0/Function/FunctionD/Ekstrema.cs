@@ -41,7 +41,7 @@ public class Ekstrema
         }
         return min;
     }
-    public double countExpression(string input, double x)
+    private double countExpression(string input, double x)
     {
         return Convert.ToDouble(new Expression("(" + input.Substring(input.IndexOf('=') + 1).Replace("|", string.Empty).Replace("x", "(" + Convert.ToString(x) + ")").Replace(",", ".") + ")").calculate());
     }

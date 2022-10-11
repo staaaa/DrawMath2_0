@@ -84,9 +84,9 @@ namespace DrawMath_2._0
             // fBox
             // 
             this.fBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
-            this.fBox.Location = new System.Drawing.Point(220, 20);
+            this.fBox.Location = new System.Drawing.Point(206, 20);
             this.fBox.Name = "fBox";
-            this.fBox.Size = new System.Drawing.Size(500, 500);
+            this.fBox.Size = new System.Drawing.Size(507, 506);
             this.fBox.TabIndex = 0;
             this.fBox.TabStop = false;
             // 
@@ -585,6 +585,7 @@ namespace DrawMath_2._0
             this.Controls.Add(this.txtBoxPrzedzial);
             this.Controls.Add(this.fBox);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "DrawMath 2.0";
             this.Load += new System.EventHandler(this.Form1_Load);
