@@ -284,18 +284,22 @@ namespace DrawMath_2._0
             // txtZerowe
             // 
             this.txtZerowe.AutoSize = true;
-            this.txtZerowe.Location = new System.Drawing.Point(108, 661);
+            this.txtZerowe.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtZerowe.Location = new System.Drawing.Point(420, 695);
             this.txtZerowe.Name = "txtZerowe";
-            this.txtZerowe.Size = new System.Drawing.Size(0, 15);
+            this.txtZerowe.Size = new System.Drawing.Size(28, 20);
             this.txtZerowe.TabIndex = 29;
+            this.txtZerowe.Text = "OY";
             // 
             // txtGraniceKoniec
             // 
             this.txtGraniceKoniec.AutoSize = true;
-            this.txtGraniceKoniec.Location = new System.Drawing.Point(188, 737);
+            this.txtGraniceKoniec.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGraniceKoniec.Location = new System.Drawing.Point(760, 675);
             this.txtGraniceKoniec.Name = "txtGraniceKoniec";
-            this.txtGraniceKoniec.Size = new System.Drawing.Size(0, 15);
+            this.txtGraniceKoniec.Size = new System.Drawing.Size(28, 20);
             this.txtGraniceKoniec.TabIndex = 31;
+            this.txtGraniceKoniec.Text = "OY";
             // 
             // panel1
             // 
@@ -308,7 +312,7 @@ namespace DrawMath_2._0
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 765);
+            this.panel1.Size = new System.Drawing.Size(200, 764);
             this.panel1.TabIndex = 34;
             // 
             // button1
@@ -415,6 +419,7 @@ namespace DrawMath_2._0
             this.txtEkstrema.Size = new System.Drawing.Size(28, 20);
             this.txtEkstrema.TabIndex = 60;
             this.txtEkstrema.Text = "OY";
+            this.txtEkstrema.Click += new System.EventHandler(this.txtEkstrema_Click);
             // 
             // txtGranicaPunkt
             // 
@@ -582,6 +587,7 @@ namespace DrawMath_2._0
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.Name = "Form1";
             this.Text = "DrawMath 2.0";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fBox)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

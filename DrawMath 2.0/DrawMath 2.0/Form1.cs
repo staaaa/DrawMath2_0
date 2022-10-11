@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DrawMath_2._0
 {
@@ -129,27 +130,29 @@ namespace DrawMath_2._0
             txtOy.Text = fDane.Oy.ToString();
             switch (fDane.monot)
             {
-                case 0: txtMonot.Text = "Funkcja niemonotoniczna"; break;
-                case 1: txtMonot.Text = "Funkcja rosnąca"; break;
-                case 2: txtMonot.Text = "Funkcja stała"; break;
-                case 3: txtMonot.Text = "Funkcja malejąca"; break;
+                case 0: txtMonot.Text = "niemonotoniczna"; break;
+                case 1: txtMonot.Text = "rosnąca"; break;
+                case 2: txtMonot.Text = "stała"; break;
+                case 3: txtMonot.Text = "malejąca"; break;
             }
             switch (fDane.monotWPrzedziale)
             {
-                case 0: txtMonotPrzedzial.Text = "Funkcja niemonotoniczna"; break;
-                case 1: txtMonotPrzedzial.Text = "Funkcja rosnąca"; break;
-                case 2: txtMonotPrzedzial.Text = "Funkcja stała"; break;
-                case 3: txtMonotPrzedzial.Text = "Funkcja malejąca"; break;
+                case 0: txtMonotPrzedzial.Text = "niemonotoniczna"; break;
+                case 1: txtMonotPrzedzial.Text = "rosnąca"; break;
+                case 2: txtMonotPrzedzial.Text = "stała"; break;
+                case 3: txtMonotPrzedzial.Text = "malejąca"; break;
             }
             foreach (double x in fDane.miejscaZerowe)
             {
                 txtZerowe.Text += x.ToString() + ", ";
             }
             txtGranicaPunkt.Text = fDane.granicaWPunkcie.ToString();
+            string txtGraniceNaKoncach = "";
             foreach (double x in fDane.graniceNaKoncach)
             {
-                txtGraniceKoniec.Text += x.ToString() + ", ";
+                txtGraniceNaKoncach += x.ToString() + ", ";
             }
+            txtGraniceKoniec.Text = txtGraniceNaKoncach;
             txtEkstrema.Text = "Max: " + fDane.ekst.max + ", Min: " + fDane.ekst.min;
             if (fDane.dziedzinaFunkcji.Count() == 0)
             {
@@ -293,6 +296,16 @@ namespace DrawMath_2._0
         }
 
         private void txtMonotPrzedzial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEkstrema_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
