@@ -24,11 +24,11 @@ public class Ekstrema
         double max = countExpression(input, start);
         for(double i = start; i < end; i+=0.1)
         {
-            if(countExpression(input, i) > max){
-                max = countExpression(input, i);
+            if(countExpression(input, Math.Round(i,5)) > max){
+                max = countExpression(input, Math.Round(i, 5));
             }
         }
-        return max;
+        return Math.Round(max);
     }
     private double countMin(string input, double start, double end)
     {
@@ -39,7 +39,7 @@ public class Ekstrema
                 min = countExpression(input, i);
             }
         }
-        return min;
+        return Math.Round(min);
     }
     private double countExpression(string input, double x)
     {

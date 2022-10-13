@@ -166,9 +166,9 @@ namespace DrawMath_2._0
             this.label2.Location = new System.Drawing.Point(740, 90);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(96, 15);
+            this.label2.Size = new System.Drawing.Size(93, 15);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Monotoniczność";
+            this.label2.Text = "Ekstremum MIN";
             // 
             // label3
             // 
@@ -396,9 +396,9 @@ namespace DrawMath_2._0
             this.label7.Location = new System.Drawing.Point(740, 165);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(55, 15);
+            this.label7.Size = new System.Drawing.Size(96, 15);
             this.label7.TabIndex = 35;
-            this.label7.Text = "Ekstrema";
+            this.label7.Text = "Ekstremum MAX";
             // 
             // txtDziedzina
             // 
