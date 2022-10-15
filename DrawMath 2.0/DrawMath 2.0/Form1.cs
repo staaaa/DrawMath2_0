@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -28,9 +29,9 @@ namespace DrawMath_2._0
             BoxDokladnosc.SelectedItem = "Mała dokładność";
         }
 
-        private void btnDraw_Click(object sender, EventArgs e)
+        private async void btnDraw_Click(object sender, EventArgs e)
         {
-            double[] przedzial = { -10, 10};
+            double[] przedzial = { -10, 10 };
             double[] przedzialMonot;
             double punktGranica;
             double dokladnosc = 0;
@@ -44,17 +45,16 @@ namespace DrawMath_2._0
             double j = przedzial[0];
             double k = 10;
 
-            CheckTextbox();
-            punktGranica = double.Parse(txtBoxGranica.Text);
+            await CheckTextbox();
+            punktGranica = setPunktGranica(txtBoxGranica.Text);
             przedzialMonot = new double[] { double.Parse(txtBoxMonot1.Text), double.Parse(txtBoxMonot2.Text) };
-
-            MessageBox.Show("Trwa rysowanie wykresu. Proszę czekać.", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            showMessage();
             label6.Text = convertString(txtBoxInput.Text);
             f1.SetInput(label6.Text);
 
             //setup
             grap.FillRectangle(whiteBrush, new Rectangle(0, 0, 506, 506));
-            DrawPoints(j, k, grap);
+            await DrawPoints(j, k, grap);
 
             if (BoxDokladnosc.SelectedIndex == 0)
             {
@@ -83,58 +83,13 @@ namespace DrawMath_2._0
             point22.Y = 250;
             grap.DrawLine(blackThick, point11, point22);
 
-            var trygFunc = "";
-            if ((f1.GetInput().Contains("tg") || f1.GetInput().Contains("tan")) && f1.GetInput().Contains("c") == false)
-            {
-                trygFunc = "tg";
-            }
-            else if (f1.GetInput().Contains("ctg") || f1.GetInput().Contains("cotan"))
-            {
-                trygFunc = "ctg";
-            }
-            for (int i = 0; i < Points.Count() - 1; i++)
-            {
-                point1.X = float.Parse(Convert.ToString(Points.Keys.Skip(i).First())) * 25 + 250;
-                point1.Y = float.Parse(Convert.ToString(Points.Values.Skip(i).First())) * 25 + 250;
-
-                point2.X = float.Parse(Convert.ToString(Points.Keys.Skip(i + 1).First())) * 25 + 250;
-                point2.Y = float.Parse(Convert.ToString(Points.Values.Skip(i + 1).First())) * 25 + 250;
-                if (trygFunc != "tg" && trygFunc != "ctg")
-                {
-                    grap.DrawLine(Function, point1, point2);
-                }
-                else if (trygFunc == "tg")
-                {
-                    if (point1.Y > point2.Y)
-                    {
-                        grap.DrawLine(Function, point1, point2);
-                    }
-                }
-                else if (trygFunc == "ctg")
-                {
-                    if (point1.Y < point2.Y)
-                    {
-                        grap.DrawLine(Function, point1, point2);
-                    }
-                }
-            }
+            var trygFunc = checkTrygFunc();
+            await drawTrigFunc(Points, point1, point2, trygFunc, grap);
             //DANE O FUNKCJI
             FunctionD fDane = new FunctionD(label6.Text, przedzial, przedzialMonot, punktGranica, dokladnosc);
             txtOy.Text = fDane.Oy.ToString();
-            switch (fDane.monot)
-            {
-                case 0: txtMonot.Text = "niemonotoniczna"; break;
-                case 1: txtMonot.Text = "rosnąca"; break;
-                case 2: txtMonot.Text = "stała"; break;
-                case 3: txtMonot.Text = "malejąca"; break;
-            }
-            switch (fDane.monotWPrzedziale)
-            {
-                case 0: txtMonotPrzedzial.Text = "niemonotoniczna"; break;
-                case 1: txtMonotPrzedzial.Text = "rosnąca"; break;
-                case 2: txtMonotPrzedzial.Text = "stała"; break;
-                case 3: txtMonotPrzedzial.Text = "malejąca"; break;
-            }
+            checkSwitchMonot(fDane);
+            await fDane.countMiejscaZerowe(txtBoxInput.Text, przedzial);
             foreach (double x in fDane.miejscaZerowe)
             {
                 txtZerowe.Text += x.ToString() + ", ";
@@ -172,15 +127,18 @@ namespace DrawMath_2._0
             }
         }
 
-        private void btnXY_Click(object sender, EventArgs e)
+        private async Task btnXY_Click(object sender, EventArgs e)
         {
-
-            if (XY.ShowDialog() == DialogResult.OK)
+            await Task.Run(() =>
             {
-                btnXY.BackColor = XY.Color;
-                blackThick = new Pen(XY.Color, 2);
-                blackThin = new Pen(XY.Color, 1);
-            }
+                if (XY.ShowDialog() == DialogResult.OK)
+                {
+                    btnXY.BackColor = XY.Color;
+                    blackThick = new Pen(XY.Color, 2);
+                    blackThin = new Pen(XY.Color, 1);
+                }
+            });
+
         }
 
         private void btnF_Click(object sender, EventArgs e)
@@ -302,35 +260,124 @@ namespace DrawMath_2._0
         {
 
         }
-        private void CheckTextbox()
+        private async Task CheckTextbox()
         {
+
             if (txtBoxMonot1.Text == "")
             {
-                MessageBox.Show("Brak wartości dla pola Monotoniczność!");
                 txtBoxMonot1.Text = "0";
+                await Task.Run(() =>
+                {
+                    MessageBox.Show("Brak wartości dla pola Monotoniczność!");
+                });
+
             }
+
             if (txtBoxMonot2.Text == "")
             {
-                MessageBox.Show("Brak wartości dla pola Ekstrema!");
                 txtBoxMonot2.Text = "0";
+                await Task.Run(() =>
+                {
+                    MessageBox.Show("Brak wartości dla pola Ekstrema!");
+                });
+
             }
             if (txtBoxGranica.Text == "")
             {
-                MessageBox.Show("Brak wartości dla pola Granica!");
                 txtBoxGranica.Text = "0";
-            }
-        }
-        private void DrawPoints(double j, double k, Graphics grap)
-        {
-            for (int i = 0; i <= 501; i += 25)
-            {
-                grap.DrawLine(blackThin, i, 255, i, 245);
-                grap.DrawLine(blackThin, 245, i, 255, i);
+                await Task.Run(() =>
+                {
+                    MessageBox.Show("Brak wartości dla pola Granica!");
+                });
 
-                grap.DrawString(j.ToString(), new Font("Calibri", 6), blackBrush, i - 2, 265);
-                grap.DrawString(k.ToString(), new Font("Calibri", 6), blackBrush, 235, i - 2);
-                j++;
-                k--;
+            }
+
+
+        }
+        private async Task DrawPoints(double j, double k, Graphics grap)
+        {
+            await Task.Run(() =>
+            {
+                for (int i = 0; i <= 501; i += 25)
+                {
+                    grap.DrawLine(blackThin, i, 255, i, 245);
+                    grap.DrawLine(blackThin, 245, i, 255, i);
+
+                    grap.DrawString(j.ToString(), new Font("Calibri", 6), blackBrush, i - 2, 265);
+                    grap.DrawString(k.ToString(), new Font("Calibri", 6), blackBrush, 235, i - 2);
+                    j++;
+                    k--;
+                }
+            });
+        }
+        private double setPunktGranica(string value)
+        {
+            return double.Parse(value);
+        }
+        private void showMessage()
+        {
+            MessageBox.Show("Trwa rysowanie wykresu. Proszę czekać.", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private string checkTrygFunc()
+        {
+            if ((f1.GetInput().Contains("tg") || f1.GetInput().Contains("tan")) && f1.GetInput().Contains("c") == false)
+            {
+                return "tg";
+            }
+            else if (f1.GetInput().Contains("ctg") || f1.GetInput().Contains("cotan"))
+            {
+                return "ctg";
+            }
+            return "";
+        }
+        private async Task drawTrigFunc(Dictionary<double, double> Points, PointF point1, PointF point2, string trygFunc, Graphics grap)
+        {
+            await Task.Run(() =>
+            {
+                for (int i = 0; i < Points.Count() - 1; i++)
+                {
+                    point1.X = float.Parse(Convert.ToString(Points.Keys.Skip(i).First())) * 25 + 250;
+                    point1.Y = float.Parse(Convert.ToString(Points.Values.Skip(i).First())) * 25 + 250;
+
+                    point2.X = float.Parse(Convert.ToString(Points.Keys.Skip(i + 1).First())) * 25 + 250;
+                    point2.Y = float.Parse(Convert.ToString(Points.Values.Skip(i + 1).First())) * 25 + 250;
+                    if (trygFunc != "tg" && trygFunc != "ctg")
+                    {
+                        grap.DrawLine(Function, point1, point2);
+                    }
+                    else if (trygFunc == "tg")
+                    {
+                        if (point1.Y > point2.Y)
+                        {
+                            grap.DrawLine(Function, point1, point2);
+                        }
+                    }
+                    else if (trygFunc == "ctg")
+                    {
+                        if (point1.Y < point2.Y)
+                        {
+                            grap.DrawLine(Function, point1, point2);
+                        }
+                    }
+                }
+            });
+
+        }
+        private void checkSwitchMonot(FunctionD fDane)
+        {
+            switch (fDane.monot)
+            {
+                case 0: txtMonot.Text="Rośnie"; break;
+                case 1: txtMonot.Text="Maleje"; break;
+                case 2: txtMonot.Text="Stała"; break;
+                case 3: txtMonot.Text="Niemonotoniczna"; break;
+            }
+            switch (fDane.monotWPrzedziale)
+            {
+                case 0: txtMonotPrzedzial.Text = "niemonotoniczna"; break;
+                case 1: txtMonotPrzedzial.Text = "rosnąca"; break;
+                case 2: txtMonotPrzedzial.Text = "stała"; break;
+                case 3: txtMonotPrzedzial.Text = "malejąca"; break;
             }
         }
     }

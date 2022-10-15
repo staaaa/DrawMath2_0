@@ -1,6 +1,8 @@
 ﻿using org.mariuszgromada.math.mxparser;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace DrawMath
 {
@@ -32,14 +34,12 @@ namespace DrawMath
             this.dokladnosc = dokladnosc;
 
             miejscaZerowe = new List<double>();
-            countMiejscaZerowe(input, przedzial);
-
             graniceNaKoncach = new List<double>();
             dziedzinaFunkcji = new List<double>();
 
             Oy = checkOy(input);
-            monot = checkMonotonicznosc(input, przedzial);
-            monotWPrzedziale = checkMonotonicznosc(input, przedzialMonoEkst);
+            monot = checkMonot(input);
+            monotWPrzedziale = checkMonot(input);
             granicaWPunkcie = countExpression(input, punktGranica);
             graniceNaKoncach.Add(countExpression(input, przedzial[0]));
             graniceNaKoncach.Add(countExpression(input, przedzial[1]));
@@ -47,85 +47,87 @@ namespace DrawMath
             dziedzinaFunkcji = CountDziedzinaFunkcji(input, przedzial);
         }
 
-        public int checkMonotonicznosc(string input, double[] przedzial)
-        {
-            int monot = 0;
-            for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
-            {
-                //BRAK
-                if (countExpression(input, i) > countExpression(input, i + 0.1) || countExpression(input, i) < countExpression(input, i + 0.1))
-                {
-                    monot = 0;
-                }
-            }
-            for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
-            {
-                //ROSNĄCA
-                if (countExpression(input, i) < countExpression(input, i + 0.1))
-                {
-                    monot = 1;
-                }
-            }
-            for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
-            {
-                //STAŁA
-                if (countExpression(input, i) == countExpression(input, i + 0.1))
-                {
-                    monot = 2;
-                }
-            }
-            for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
-            {
-                //MALEJACA
-                if (countExpression(input, i) > countExpression(input, i + 0.1))
-                {
-                    double x = 0;
-                    x = countExpression(input, i);
-                    monot = 3;
-                }
-            }
-            return monot;
-        }
-        /*
-        public static int checkMonot(string input)
+        //public int checkMonotonicznosc(string input, double[] przedzial)
+        //{
+        //    int monot = 0;
+        //    for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
+        //    {
+        //        //BRAK
+        //        if (countExpression(input, i) > countExpression(input, i + 0.1) || countExpression(input, i) < countExpression(input, i + 0.1))
+        //        {
+        //            monot = 0;
+        //        }
+        //    }
+        //    for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
+        //    {
+        //        //ROSNĄCA
+        //        if (countExpression(input, i) < countExpression(input, i + 0.1))
+        //        {
+        //            monot = 1;
+        //        }
+        //    }
+        //    for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
+        //    {
+        //        //STAŁA
+        //        if (countExpression(input, i) == countExpression(input, i + 0.1))
+        //        {
+        //            monot = 2;
+        //        }
+        //    }
+        //    for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
+        //    {
+        //        //MALEJACA
+        //        if (countExpression(input, i) > countExpression(input, i + 0.1))
+        //        {
+        //            double x = 0;
+        //            x = countExpression(input, i);
+        //            monot = 3;
+        //        }
+        //    }
+        //    return monot;
+        //}
+    
+        public int checkMonot(string input)
         {
             List<int> test1 = new List<int>();
             int monot=0;
             double min = countExpression(input, -10.1);
-            for (double i = -10; i <= 10; i = i + 0.1)
-            {
-                double test = countExpression(input, Math.Round(i, 2));
-                if (min < test)
+
+                for (double i = -10; i <= 10; i = i + 0.1)
                 {
-                    //ROSNIE
-                    min = test;
-                    monot = 0;
-                    test1.Add(monot);
+                    double test = countExpression(input, Math.Round(i, 2));
+                    if (min < test)
+                    {
+                        //ROSNIE
+                        min = test;
+                        monot = 0;
+                        test1.Add(monot);
+                    }
+                    else if (min > test)
+                    {
+                        //MALEJE
+                        min = test;
+                        monot = 1;
+                        test1.Add(monot);
+                    }
+                    else if (min == test)
+                    {
+                        //STALA
+                        min = test;
+                        monot = 2;
+                        test1.Add(monot);
+                    }
                 }
-                else if (min > test)
+                if (test1.Distinct().Skip(1).Any())
                 {
-                    //MALEJE
-                    min = test;
-                    monot = 1;
-                    test1.Add(monot);
+                    //STACHU?? NIEMONOTONICZNE TO
+                    return 3;
                 }
-                else if (min == test)
-                {
-                    //STALA
-                    min = test;
-                    monot = 2;
-                    test1.Add(monot);
-                }
-            }
-            if (test1.Distinct().Skip(1).Any())
-            {
-                //STACHU?? NIEMONOTONICZNE TO
-                return 3;
-            }
+            
 
             return monot;
         }
-        */
+        
 
         public double checkOy(string input)
         {
@@ -133,16 +135,19 @@ namespace DrawMath
             return countExpression(input, x);
         }
 
-        public void countMiejscaZerowe(string input, double[] przedzial)
+        public async Task countMiejscaZerowe(string input, double[] przedzial)
         {
-            for(double i = przedzial[0]; i < przedzial[1]; i+= 0.01)
+            await Task.Run(() =>
             {
-                double X = Convert.ToDouble(new Expression("solve(" + input + ",x," + i + "," + przedzial[1] + ")").calculate());
-                if (!double.IsNaN(X))
+                for (double i = przedzial[0]; i < przedzial[1]; i += 0.01)
                 {
-                    miejscaZerowe.Add(X);
+                    double X = Convert.ToDouble(new Expression("solve(" + input + ",x," + i + "," + przedzial[1] + ")").calculate());
+                    if (!double.IsNaN(X))
+                    {
+                        miejscaZerowe.Add(X);
+                    }
                 }
-            }   
+            });          
         }
 
         public Dictionary<double, double> countAsymptoty(string input)
