@@ -89,7 +89,8 @@ namespace DrawMath_2._0
             FunctionD fDane = new FunctionD(label6.Text, przedzial, przedzialMonot, punktGranica, dokladnosc);
             txtOy.Text = fDane.Oy.ToString();
             checkSwitchMonot(fDane);
-            await fDane.countMiejscaZerowe(txtBoxInput.Text, przedzial);
+            fDane.countMiejscaZerowe(przedzial, przedzial[0]);
+            txtZerowe.Text = "";
             foreach (double x in fDane.miejscaZerowe)
             {
                 txtZerowe.Text += x.ToString() + ", ";

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2oxjmz6x4tq1+TGxdhPJzEpQUZViG5fycsR9hxGfNPJYZLWOeiCjnKs5/kk6nV7EFr8kJWkOKrSB3Fn8kxDh6Q==",
+  "dgSpecHash": "YPjbFk+Iw4jBrMhiVyn9ZE79MFsaxtK06CiD8Tu6SL7o4pv27t9Kp92lhBHYqHAqZF5RYt+cp8HgNKX/evD4Pg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kewin\\Source\\Repos\\DrawMath2_0\\DrawMath 2.0\\DrawMath 2.0\\DrawMath 2.0.csproj",
+  "projectFilePath": "C:\\Users\\Stanisław\\Desktop\\DrawMath2_0-main\\DrawMath 2.0\\DrawMath 2.0\\DrawMath 2.0.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Kewin\\.nuget\\packages\\mathparser.org-mxparser\\5.0.7\\mathparser.org-mxparser.5.0.7.nupkg.sha512"
+    "C:\\Users\\Stanisław\\.nuget\\packages\\mathparser.org-mxparser\\5.0.7\\mathparser.org-mxparser.5.0.7.nupkg.sha512"
   ],
   "logs": []
 }

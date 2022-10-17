@@ -135,17 +135,22 @@ namespace DrawMath
             return countExpression(input, x);
         }
 
-        public async Task countMiejscaZerowe(string input, double[] przedzial)
+        public async Task countMiejscaZerowe(double[] przedzial, double lastX)
         {
             await Task.Run(() =>
             {
-                for (double i = przedzial[0]; i < przedzial[1]; i += 0.01)
+                for (var i = przedzial[0]; i < przedzial[1]; i++)
                 {
-                    double X = Convert.ToDouble(new Expression("solve(" + input + ",x," + i + "," + przedzial[1] + ")").calculate());
+                    double X = Convert.ToDouble(new Expression("solve(" + input + ",x," + lastX + "," + przedzial[1] + ")").calculate());
                     if (!double.IsNaN(X))
                     {
-                        miejscaZerowe.Add(X);
+
+                        if (!miejscaZerowe.Contains(Math.Round(X,2)))
+                        {
+                            miejscaZerowe.Add(Math.Round(X, 2));
+                        }
                     }
+                    
                 }
             });          
         }

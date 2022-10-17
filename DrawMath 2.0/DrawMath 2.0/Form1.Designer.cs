@@ -166,9 +166,9 @@ namespace DrawMath_2._0
             this.label2.Location = new System.Drawing.Point(740, 90);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(93, 15);
+            this.label2.Size = new System.Drawing.Size(110, 15);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Ekstremum MIN";
+            this.label2.Text = "Początek przedziału";
             // 
             // label3
             // 
@@ -246,7 +246,7 @@ namespace DrawMath_2._0
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(684, 393);
+            this.label6.Location = new System.Drawing.Point(945, 337);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 15);
             this.label6.TabIndex = 14;
@@ -259,7 +259,6 @@ namespace DrawMath_2._0
             this.btnXY.Size = new System.Drawing.Size(20, 20);
             this.btnXY.TabIndex = 15;
             this.btnXY.UseVisualStyleBackColor = false;
-            //this.btnXY.Click += new System.EventHandler(this.btnXY_Click);
             // 
             // btnF
             // 
@@ -285,21 +284,19 @@ namespace DrawMath_2._0
             // 
             this.txtZerowe.AutoSize = true;
             this.txtZerowe.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtZerowe.Location = new System.Drawing.Point(420, 695);
+            this.txtZerowe.Location = new System.Drawing.Point(340, 695);
             this.txtZerowe.Name = "txtZerowe";
-            this.txtZerowe.Size = new System.Drawing.Size(28, 20);
+            this.txtZerowe.Size = new System.Drawing.Size(0, 20);
             this.txtZerowe.TabIndex = 29;
-            this.txtZerowe.Text = "OY";
             // 
             // txtGraniceKoniec
             // 
             this.txtGraniceKoniec.AutoSize = true;
             this.txtGraniceKoniec.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtGraniceKoniec.Location = new System.Drawing.Point(760, 675);
+            this.txtGraniceKoniec.Location = new System.Drawing.Point(813, 675);
             this.txtGraniceKoniec.Name = "txtGraniceKoniec";
-            this.txtGraniceKoniec.Size = new System.Drawing.Size(28, 20);
+            this.txtGraniceKoniec.Size = new System.Drawing.Size(0, 20);
             this.txtGraniceKoniec.TabIndex = 31;
-            this.txtGraniceKoniec.Text = "OY";
             // 
             // panel1
             // 
@@ -396,19 +393,18 @@ namespace DrawMath_2._0
             this.label7.Location = new System.Drawing.Point(740, 165);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(96, 15);
+            this.label7.Size = new System.Drawing.Size(99, 15);
             this.label7.TabIndex = 35;
-            this.label7.Text = "Ekstremum MAX";
+            this.label7.Text = "Koniec przedziału";
             // 
             // txtDziedzina
             // 
             this.txtDziedzina.AutoSize = true;
             this.txtDziedzina.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDziedzina.Location = new System.Drawing.Point(760, 595);
+            this.txtDziedzina.Location = new System.Drawing.Point(671, 595);
             this.txtDziedzina.Name = "txtDziedzina";
-            this.txtDziedzina.Size = new System.Drawing.Size(28, 20);
+            this.txtDziedzina.Size = new System.Drawing.Size(0, 20);
             this.txtDziedzina.TabIndex = 61;
-            this.txtDziedzina.Text = "OY";
             // 
             // txtEkstrema
             // 
@@ -416,41 +412,37 @@ namespace DrawMath_2._0
             this.txtEkstrema.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEkstrema.Location = new System.Drawing.Point(760, 555);
             this.txtEkstrema.Name = "txtEkstrema";
-            this.txtEkstrema.Size = new System.Drawing.Size(28, 20);
+            this.txtEkstrema.Size = new System.Drawing.Size(0, 20);
             this.txtEkstrema.TabIndex = 60;
-            this.txtEkstrema.Text = "OY";
             this.txtEkstrema.Click += new System.EventHandler(this.txtEkstrema_Click);
             // 
             // txtGranicaPunkt
             // 
             this.txtGranicaPunkt.AutoSize = true;
             this.txtGranicaPunkt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtGranicaPunkt.Location = new System.Drawing.Point(760, 635);
+            this.txtGranicaPunkt.Location = new System.Drawing.Point(678, 635);
             this.txtGranicaPunkt.Name = "txtGranicaPunkt";
-            this.txtGranicaPunkt.Size = new System.Drawing.Size(28, 20);
+            this.txtGranicaPunkt.Size = new System.Drawing.Size(0, 20);
             this.txtGranicaPunkt.TabIndex = 59;
-            this.txtGranicaPunkt.Text = "OY";
             // 
             // txtMonotPrzedzial
             // 
             this.txtMonotPrzedzial.AutoSize = true;
             this.txtMonotPrzedzial.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMonotPrzedzial.Location = new System.Drawing.Point(420, 635);
+            this.txtMonotPrzedzial.Location = new System.Drawing.Point(410, 635);
             this.txtMonotPrzedzial.Name = "txtMonotPrzedzial";
-            this.txtMonotPrzedzial.Size = new System.Drawing.Size(28, 20);
+            this.txtMonotPrzedzial.Size = new System.Drawing.Size(0, 20);
             this.txtMonotPrzedzial.TabIndex = 58;
-            this.txtMonotPrzedzial.Text = "OY";
             this.txtMonotPrzedzial.Click += new System.EventHandler(this.txtMonotPrzedzial_Click);
             // 
             // txtMonot
             // 
             this.txtMonot.AutoSize = true;
             this.txtMonot.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMonot.Location = new System.Drawing.Point(420, 595);
+            this.txtMonot.Location = new System.Drawing.Point(394, 595);
             this.txtMonot.Name = "txtMonot";
-            this.txtMonot.Size = new System.Drawing.Size(28, 20);
+            this.txtMonot.Size = new System.Drawing.Size(0, 20);
             this.txtMonot.TabIndex = 57;
-            this.txtMonot.Text = "OY";
             // 
             // txtOy
             // 
@@ -458,9 +450,8 @@ namespace DrawMath_2._0
             this.txtOy.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtOy.Location = new System.Drawing.Point(420, 555);
             this.txtOy.Name = "txtOy";
-            this.txtOy.Size = new System.Drawing.Size(28, 20);
+            this.txtOy.Size = new System.Drawing.Size(0, 20);
             this.txtOy.TabIndex = 56;
-            this.txtOy.Text = "OY";
             // 
             // label14
             // 
@@ -488,9 +479,9 @@ namespace DrawMath_2._0
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.Location = new System.Drawing.Point(540, 675);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(213, 20);
+            this.label12.Size = new System.Drawing.Size(273, 20);
             this.label12.TabIndex = 53;
-            this.label12.Text = "Granice na końcach przedziału:";
+            this.label12.Text = "Granice na końcach przedziału(-10 i 10):";
             // 
             // label11
             // 
