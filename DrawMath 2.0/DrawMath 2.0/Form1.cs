@@ -381,5 +381,17 @@ namespace DrawMath_2._0
                 case 3: txtMonotPrzedzial.Text = "malejąca"; break;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Dokumentacja docs = new Dokumentacja();
+            docs.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
