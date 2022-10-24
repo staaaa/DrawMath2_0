@@ -31,7 +31,7 @@ namespace DrawMath_2._0
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.fBox = new System.Windows.Forms.PictureBox();
-            this.txtBoxPrzedzial = new System.Windows.Forms.TextBox();
+            this.txtBoxPochodna = new System.Windows.Forms.TextBox();
             this.txtBoxMonot1 = new System.Windows.Forms.TextBox();
             this.txtBoxMonot2 = new System.Windows.Forms.TextBox();
             this.txtBoxGranica = new System.Windows.Forms.TextBox();
@@ -74,6 +74,8 @@ namespace DrawMath_2._0
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtPochodna = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fBox)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -90,17 +92,17 @@ namespace DrawMath_2._0
             this.fBox.TabIndex = 0;
             this.fBox.TabStop = false;
             // 
-            // txtBoxPrzedzial
+            // txtBoxPochodna
             // 
-            this.txtBoxPrzedzial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
-            this.txtBoxPrzedzial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxPrzedzial.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxPrzedzial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.txtBoxPrzedzial.Location = new System.Drawing.Point(740, 45);
-            this.txtBoxPrzedzial.Multiline = true;
-            this.txtBoxPrzedzial.Name = "txtBoxPrzedzial";
-            this.txtBoxPrzedzial.Size = new System.Drawing.Size(160, 28);
-            this.txtBoxPrzedzial.TabIndex = 1;
+            this.txtBoxPochodna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
+            this.txtBoxPochodna.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxPochodna.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxPochodna.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.txtBoxPochodna.Location = new System.Drawing.Point(740, 45);
+            this.txtBoxPochodna.Multiline = true;
+            this.txtBoxPochodna.Name = "txtBoxPochodna";
+            this.txtBoxPochodna.Size = new System.Drawing.Size(160, 28);
+            this.txtBoxPochodna.TabIndex = 1;
             // 
             // txtBoxMonot1
             // 
@@ -156,9 +158,9 @@ namespace DrawMath_2._0
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(740, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 15);
+            this.label1.Size = new System.Drawing.Size(154, 15);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Przedzial funkcji";
+            this.label1.Text = "Punkt obliczania pochodnej";
             // 
             // label2
             // 
@@ -535,12 +537,33 @@ namespace DrawMath_2._0
             this.label15.TabIndex = 48;
             this.label15.Text = "Punkt przecięcia z osią OY:";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(540, 710);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(124, 20);
+            this.label16.TabIndex = 62;
+            this.label16.Text = "Pochodna funkcji:";
+            // 
+            // txtPochodna
+            // 
+            this.txtPochodna.AutoSize = true;
+            this.txtPochodna.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPochodna.Location = new System.Drawing.Point(665, 710);
+            this.txtPochodna.Name = "txtPochodna";
+            this.txtPochodna.Size = new System.Drawing.Size(0, 20);
+            this.txtPochodna.TabIndex = 63;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.txtPochodna);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.txtDziedzina);
             this.Controls.Add(this.txtEkstrema);
             this.Controls.Add(this.txtGranicaPunkt);
@@ -575,7 +598,7 @@ namespace DrawMath_2._0
             this.Controls.Add(this.txtBoxGranica);
             this.Controls.Add(this.txtBoxMonot2);
             this.Controls.Add(this.txtBoxMonot1);
-            this.Controls.Add(this.txtBoxPrzedzial);
+            this.Controls.Add(this.txtBoxPochodna);
             this.Controls.Add(this.fBox);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -595,7 +618,7 @@ namespace DrawMath_2._0
         #endregion
 
         private System.Windows.Forms.PictureBox fBox;
-        private System.Windows.Forms.TextBox txtBoxPrzedzial;
+        private System.Windows.Forms.TextBox txtBoxPochodna;
         private System.Windows.Forms.TextBox txtBoxMonot1;
         private System.Windows.Forms.TextBox txtBoxMonot2;
         private System.Windows.Forms.TextBox txtBoxGranica;
@@ -638,6 +661,8 @@ namespace DrawMath_2._0
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label txtPochodna;
     }
 }
 

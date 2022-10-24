@@ -14,6 +14,7 @@ namespace DrawMath
         public double[] przedzialMonoEkst;
         public double punktGranica;
         public double dokladnosc;
+        public double punktPochodna;
 
         //obliczane potem
         public double Oy;
@@ -24,14 +25,16 @@ namespace DrawMath
         public List<double> graniceNaKoncach;
         public Ekstrema ekst;
         public List<double> dziedzinaFunkcji;
+        public string pochodna;
         //public Dictionary<double, double> asymptoty;
-        public FunctionD(string input, double[] przedzial, double[] przedzialMonoEkst, double punktGranica, double dokladnosc)
+        public FunctionD(string input, double[] przedzial, double[] przedzialMonoEkst, double punktGranica, double dokladnosc, double punktPochodna)
         {
             this.input = input;
             this.przedzial = przedzial;
             this.przedzialMonoEkst = przedzialMonoEkst;
             this.punktGranica = punktGranica;
             this.dokladnosc = dokladnosc;
+            this.punktPochodna = punktPochodna;
 
             miejscaZerowe = new List<double>();
             graniceNaKoncach = new List<double>();
@@ -45,47 +48,8 @@ namespace DrawMath
             graniceNaKoncach.Add(countExpression(input, przedzial[1]));
             ekst = new Ekstrema(input, przedzialMonoEkst[0], przedzialMonoEkst[1]);
             dziedzinaFunkcji = CountDziedzinaFunkcji(input, przedzial);
+            pochodna = countPochodna(input);
         }
-
-        //public int checkMonotonicznosc(string input, double[] przedzial)
-        //{
-        //    int monot = 0;
-        //    for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
-        //    {
-        //        //BRAK
-        //        if (countExpression(input, i) > countExpression(input, i + 0.1) || countExpression(input, i) < countExpression(input, i + 0.1))
-        //        {
-        //            monot = 0;
-        //        }
-        //    }
-        //    for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
-        //    {
-        //        //ROSNĄCA
-        //        if (countExpression(input, i) < countExpression(input, i + 0.1))
-        //        {
-        //            monot = 1;
-        //        }
-        //    }
-        //    for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
-        //    {
-        //        //STAŁA
-        //        if (countExpression(input, i) == countExpression(input, i + 0.1))
-        //        {
-        //            monot = 2;
-        //        }
-        //    }
-        //    for (double i = przedzial[0]; i < przedzial[1]; i += 0.1)
-        //    {
-        //        //MALEJACA
-        //        if (countExpression(input, i) > countExpression(input, i + 0.1))
-        //        {
-        //            double x = 0;
-        //            x = countExpression(input, i);
-        //            monot = 3;
-        //        }
-        //    }
-        //    return monot;
-        //}
     
         public int checkMonot(string input)
         {
@@ -155,9 +119,10 @@ namespace DrawMath
             });          
         }
 
-        public Dictionary<double, double> countAsymptoty(string input)
+        public string countPochodna(string input)
         {
-            throw new NotImplementedException();
+            Expression e = new Expression("der("+input+", x,"+punktPochodna+")");
+            return e.calculate().ToString();
         }
         //dzielenie przez zero - pierwiastek
         public List<double> CountDziedzinaFunkcji(string input, double[] przedzial)

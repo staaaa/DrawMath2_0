@@ -86,7 +86,7 @@ namespace DrawMath_2._0
             var trygFunc = checkTrygFunc();
             await drawTrigFunc(Points, point1, point2, trygFunc, grap);
             //DANE O FUNKCJI
-            FunctionD fDane = new FunctionD(label6.Text, przedzial, przedzialMonot, punktGranica, dokladnosc);
+            FunctionD fDane = new FunctionD(label6.Text, przedzial, przedzialMonot, punktGranica, dokladnosc, Convert.ToDouble(txtBoxPochodna.Text));
             txtOy.Text = fDane.Oy.ToString();
             checkSwitchMonot(fDane);
             await fDane.countMiejscaZerowe(przedzial, przedzial[0]);
@@ -116,6 +116,7 @@ namespace DrawMath_2._0
                 }
                 txtDziedzina.Text = "Rzeczywiste z wyłączeniem { " + allX + " }";
             }
+            txtPochodna.Text = Math.Round(Convert.ToDouble(fDane.pochodna),4).ToString();
             MessageBox.Show("WYKRES NARYSOWANY!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             fBox.Image = bmp;
             label6.Text = "";
