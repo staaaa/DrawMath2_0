@@ -26,7 +26,6 @@ namespace DrawMath
         public Ekstrema ekst;
         public List<double> dziedzinaFunkcji;
         public string pochodna;
-        //public Dictionary<double, double> asymptoty;
         public FunctionD(string input, double[] przedzial, double[] przedzialMonoEkst, double punktGranica, double dokladnosc, double punktPochodna)
         {
             this.input = input;

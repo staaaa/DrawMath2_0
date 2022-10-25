@@ -15,6 +15,7 @@ namespace DrawMath_2._0
     {
         FunctionP f1 = new FunctionP();
         Pen Function = new Pen(Color.Red, 3);
+        Pen Asymptota = new Pen(Color.DarkBlue, 2);
         Pen blackThick = new Pen(Color.Black, 2);
         Pen blackThin = new Pen(Color.Black, 1);
         SolidBrush whiteBrush = new SolidBrush(Color.White);
@@ -53,6 +54,7 @@ namespace DrawMath_2._0
             f1.SetInput(label6.Text);
 
             //setup
+            FunctionD fDane = new FunctionD(label6.Text, przedzial, przedzialMonot, punktGranica, dokladnosc, Convert.ToDouble(txtBoxPochodna.Text));
             grap.FillRectangle(whiteBrush, new Rectangle(0, 0, 506, 506));
             await DrawPoints(j, k, grap);
 
@@ -84,9 +86,8 @@ namespace DrawMath_2._0
             grap.DrawLine(blackThick, point11, point22);
 
             var trygFunc = checkTrygFunc();
-            await drawTrigFunc(Points, point1, point2, trygFunc, grap);
+            await drawFunction(Points, point1, point2, trygFunc, grap, fDane);
             //DANE O FUNKCJI
-            FunctionD fDane = new FunctionD(label6.Text, przedzial, przedzialMonot, punktGranica, dokladnosc, Convert.ToDouble(txtBoxPochodna.Text));
             txtOy.Text = fDane.Oy.ToString();
             checkSwitchMonot(fDane);
             await fDane.countMiejscaZerowe(przedzial, przedzial[0]);
@@ -95,11 +96,11 @@ namespace DrawMath_2._0
             {
                 txtZerowe.Text += x.ToString() + ", ";
             }
-            txtGranicaPunkt.Text = fDane.granicaWPunkcie.ToString();
+            txtGranicaPunkt.Text = Math.Round(fDane.granicaWPunkcie,4).ToString();
             string txtGraniceNaKoncach = "";
             foreach (double x in fDane.graniceNaKoncach)
             {
-                txtGraniceNaKoncach += x.ToString() + ", ";
+                txtGraniceNaKoncach += Math.Round(x,2).ToString() + ", ";
             }
             txtGraniceKoniec.Text = txtGraniceNaKoncach;
             txtEkstrema.Text = "Max: " + fDane.ekst.max + ", Min: " + fDane.ekst.min;
@@ -123,6 +124,7 @@ namespace DrawMath_2._0
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            saveFileDialog1.Filter = "Pliki graficzne (*.png)|*.png";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fBox.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
@@ -332,7 +334,7 @@ namespace DrawMath_2._0
             }
             return "";
         }
-        private async Task drawTrigFunc(Dictionary<double, double> Points, PointF point1, PointF point2, string trygFunc, Graphics grap)
+        private async Task drawFunction(Dictionary<double, double> Points, PointF point1, PointF point2, string trygFunc, Graphics grap, FunctionD fDane)
         {
             await Task.Run(() =>
             {
@@ -343,7 +345,7 @@ namespace DrawMath_2._0
 
                     point2.X = float.Parse(Convert.ToString(Points.Keys.Skip(i + 1).First())) * 25 + 250;
                     point2.Y = float.Parse(Convert.ToString(Points.Values.Skip(i + 1).First())) * 25 + 250;
-                    if (trygFunc != "tg" && trygFunc != "ctg")
+                    if (trygFunc != "tg" && trygFunc != "ctg" && !float.IsNaN(point1.Y) && !float.IsNaN(point2.Y))
                     {
                         grap.DrawLine(Function, point1, point2);
                     }
@@ -362,6 +364,16 @@ namespace DrawMath_2._0
                         }
                     }
                 }
+                if(fDane.dziedzinaFunkcji.Count() == 1)
+                {
+                    point1.X = float.Parse(fDane.dziedzinaFunkcji[0].ToString()) * 25 + 250;
+                    point1.Y = 500;
+
+                    point2.X = float.Parse(fDane.dziedzinaFunkcji[0].ToString()) * 25 + 250;
+                    point2.Y = 0;
+                    
+                    grap.DrawLine(Asymptota, point1, point2);
+                }
             });
 
         }
@@ -376,10 +388,10 @@ namespace DrawMath_2._0
             }
             switch (fDane.monotWPrzedziale)
             {
-                case 0: txtMonotPrzedzial.Text = "niemonotoniczna"; break;
-                case 1: txtMonotPrzedzial.Text = "rosnąca"; break;
-                case 2: txtMonotPrzedzial.Text = "stała"; break;
-                case 3: txtMonotPrzedzial.Text = "malejąca"; break;
+                case 0: txtMonotPrzedzial.Text = "Niemonotoniczna"; break;
+                case 1: txtMonotPrzedzial.Text = "Rosnąca"; break;
+                case 2: txtMonotPrzedzial.Text = "Stała"; break;
+                case 3: txtMonotPrzedzial.Text = "Malejąca"; break;
             }
         }
 

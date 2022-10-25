@@ -186,13 +186,14 @@ namespace DrawMath_2._0
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(740, 345);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 15);
+            this.label4.Size = new System.Drawing.Size(73, 15);
             this.label4.TabIndex = 9;
-            this.label4.Text = "wzór funkcji";
+            this.label4.Text = "Wzór funkcji";
             // 
             // BoxDokladnosc
             // 
             this.BoxDokladnosc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
+            this.BoxDokladnosc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BoxDokladnosc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BoxDokladnosc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.BoxDokladnosc.FormattingEnabled = true;
@@ -210,9 +211,9 @@ namespace DrawMath_2._0
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(740, 415);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 15);
+            this.label5.Size = new System.Drawing.Size(115, 15);
             this.label5.TabIndex = 11;
-            this.label5.Text = "dokładność wykresu";
+            this.label5.Text = "Dokładność wykresu";
             // 
             // btnDraw
             // 
