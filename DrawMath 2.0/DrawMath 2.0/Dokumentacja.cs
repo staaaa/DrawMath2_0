@@ -27,14 +27,9 @@ namespace DrawMath_2._0
             Environment.Exit(0);
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void Dokumentacja_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+            Environment.Exit(0);
         }
     }
 }

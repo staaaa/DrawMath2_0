@@ -94,3 +94,4 @@ C:\Users\Stanisław\Desktop\rysuj matematyke\DrawMath2_0\DrawMath 2.0\DrawMath 2
 C:\Users\Stanisław\Desktop\rysuj matematyke\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.dll
 C:\Users\Stanisław\Desktop\rysuj matematyke\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.pdb
 C:\Users\Stanisław\Desktop\rysuj matematyke\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath 2.0.genruntimeconfig.cache
+C:\Users\Kewin\Source\Repos\DrawMath2_0\DrawMath 2.0\DrawMath 2.0\obj\Debug\netcoreapp3.1\DrawMath_2._0.Dokumentacja.resources

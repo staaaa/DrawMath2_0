@@ -323,6 +323,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Dokumentacja";
             this.Text = "Dokumentacja";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dokumentacja_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);

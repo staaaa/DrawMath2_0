@@ -266,7 +266,6 @@ namespace DrawMath_2._0
         }
         private async Task CheckTextbox()
         {
-
             if (txtBoxMonot1.Text == "")
             {
                 txtBoxMonot1.Text = "0";
@@ -274,7 +273,6 @@ namespace DrawMath_2._0
                 {
                     MessageBox.Show("Brak wartości dla pola Monotoniczność!");
                 });
-
             }
 
             if (txtBoxMonot2.Text == "")
@@ -284,7 +282,6 @@ namespace DrawMath_2._0
                 {
                     MessageBox.Show("Brak wartości dla pola Ekstrema!");
                 });
-
             }
             if (txtBoxGranica.Text == "")
             {
@@ -293,9 +290,15 @@ namespace DrawMath_2._0
                 {
                     MessageBox.Show("Brak wartości dla pola Granica!");
                 });
-
             }
-
+            if (txtBoxPochodna.Text == "")
+            {
+                txtBoxPochodna.Text = "0";
+                await Task.Run(() =>
+                {
+                    MessageBox.Show("Brak wartości dla pola Pochodna!");
+                });
+            }
 
         }
         private async Task DrawPoints(double j, double k, Graphics grap)
