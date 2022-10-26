@@ -41,7 +41,7 @@ namespace DrawMath
 
             Oy = checkOy(input);
             monot = checkMonot(input);
-            monotWPrzedziale = checkMonot(input);
+            monotWPrzedziale = checkMonotWPrzedziale(input);
             granicaWPunkcie = countExpression(input, punktGranica);
             graniceNaKoncach.Add(countExpression(input, przedzial[0]));
             graniceNaKoncach.Add(countExpression(input, przedzial[1]));
@@ -56,7 +56,7 @@ namespace DrawMath
             int monot=0;
             double min = countExpression(input, -10.1);
 
-                for (double i = -10; i <= 10; i = i + 0.1)
+                for (double i = -10; i <= 10; i += 0.1)
                 {
                     double test = countExpression(input, Math.Round(i, 2));
                     if (min < test)
@@ -86,11 +86,46 @@ namespace DrawMath
                     //STACHU?? NIEMONOTONICZNE TO
                     return 3;
                 }
-            
-
             return monot;
         }
-        
+        public int checkMonotWPrzedziale(string input)
+        {
+            List<int> test1 = new List<int>();
+            int monot = 0;
+            double min = countExpression(input, przedzialMonoEkst[0]-0.1);
+
+            for (double i = przedzialMonoEkst[0] ; i <= przedzialMonoEkst[1]; i += 0.1)
+            {
+                double test = countExpression(input, Math.Round(i, 2));
+                if (min < test)
+                {
+                    //ROSNIE
+                    min = test;
+                    monot = 0;
+                    test1.Add(monot);
+                }
+                else if (min > test)
+                {
+                    //MALEJE
+                    min = test;
+                    monot = 1;
+                    test1.Add(monot);
+                }
+                else if (min == test)
+                {
+                    //STALA
+                    min = test;
+                    monot = 2;
+                    test1.Add(monot);
+                }
+            }
+            if (test1.Distinct().Skip(1).Any())
+            {
+                //STACHU?? NIEMONOTONICZNE TO
+                return 3;
+            }
+            return monot;
+        }
 
         public double checkOy(string input)
         {

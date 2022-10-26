@@ -262,6 +262,7 @@ namespace DrawMath_2._0
             this.btnXY.Size = new System.Drawing.Size(20, 20);
             this.btnXY.TabIndex = 15;
             this.btnXY.UseVisualStyleBackColor = false;
+            this.btnXY.Click += new System.EventHandler(this.btnXY_Click);
             // 
             // btnF
             // 

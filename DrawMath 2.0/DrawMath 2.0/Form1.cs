@@ -7,7 +7,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace DrawMath_2._0
 {
@@ -94,13 +93,13 @@ namespace DrawMath_2._0
             txtZerowe.Text = "";
             foreach (double x in fDane.miejscaZerowe)
             {
-                txtZerowe.Text += x.ToString() + ", ";
+                txtZerowe.Text += x.ToString() + "; ";
             }
-            txtGranicaPunkt.Text = Math.Round(fDane.granicaWPunkcie,4).ToString();
+            txtGranicaPunkt.Text = Math.Round(fDane.granicaWPunkcie, 4).ToString();
             string txtGraniceNaKoncach = "";
             foreach (double x in fDane.graniceNaKoncach)
             {
-                txtGraniceNaKoncach += Math.Round(x,2).ToString() + ", ";
+                txtGraniceNaKoncach += Math.Round(x, 2).ToString() + ", ";
             }
             txtGraniceKoniec.Text = txtGraniceNaKoncach;
             txtEkstrema.Text = "Max: " + fDane.ekst.max + ", Min: " + fDane.ekst.min;
@@ -117,7 +116,7 @@ namespace DrawMath_2._0
                 }
                 txtDziedzina.Text = "Rzeczywiste z wyłączeniem { " + allX + " }";
             }
-            txtPochodna.Text = Math.Round(Convert.ToDouble(fDane.pochodna),4).ToString();
+            txtPochodna.Text = Math.Round(Convert.ToDouble(fDane.pochodna), 4).ToString();
             MessageBox.Show("WYKRES NARYSOWANY!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             fBox.Image = bmp;
             label6.Text = "";
@@ -129,20 +128,6 @@ namespace DrawMath_2._0
             {
                 fBox.Image.Save(saveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Png);
             }
-        }
-
-        private async Task btnXY_Click(object sender, EventArgs e)
-        {
-            await Task.Run(() =>
-            {
-                if (XY.ShowDialog() == DialogResult.OK)
-                {
-                    btnXY.BackColor = XY.Color;
-                    blackThick = new Pen(XY.Color, 2);
-                    blackThin = new Pen(XY.Color, 1);
-                }
-            });
-
         }
 
         private void btnF_Click(object sender, EventArgs e)
@@ -367,14 +352,14 @@ namespace DrawMath_2._0
                         }
                     }
                 }
-                if(fDane.dziedzinaFunkcji.Count() == 1)
+                if (fDane.dziedzinaFunkcji.Count() == 1)
                 {
                     point1.X = float.Parse(fDane.dziedzinaFunkcji[0].ToString()) * 25 + 250;
                     point1.Y = 500;
 
                     point2.X = float.Parse(fDane.dziedzinaFunkcji[0].ToString()) * 25 + 250;
                     point2.Y = 0;
-                    
+
                     grap.DrawLine(Asymptota, point1, point2);
                 }
             });
@@ -384,17 +369,17 @@ namespace DrawMath_2._0
         {
             switch (fDane.monot)
             {
-                case 0: txtMonot.Text="Rośnie"; break;
-                case 1: txtMonot.Text="Maleje"; break;
-                case 2: txtMonot.Text="Stała"; break;
-                case 3: txtMonot.Text="Niemonotoniczna"; break;
+                case 0: txtMonot.Text = "Rosnąca"; break;
+                case 1: txtMonot.Text = "Malejąca"; break;
+                case 2: txtMonot.Text = "Stała"; break;
+                case 3: txtMonot.Text = "Niemonotoniczna"; break;
             }
             switch (fDane.monotWPrzedziale)
             {
-                case 0: txtMonotPrzedzial.Text = "Niemonotoniczna"; break;
-                case 1: txtMonotPrzedzial.Text = "Rosnąca"; break;
+                case 0: txtMonotPrzedzial.Text = "Rosnąca"; break;
+                case 1: txtMonotPrzedzial.Text = "Malejąca"; break;
                 case 2: txtMonotPrzedzial.Text = "Stała"; break;
-                case 3: txtMonotPrzedzial.Text = "Malejąca"; break;
+                case 3: txtMonotPrzedzial.Text = "Niemonotoniczna"; break;
             }
         }
 
@@ -408,6 +393,16 @@ namespace DrawMath_2._0
         private void button1_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btnXY_Click(object sender, EventArgs e)
+        {
+            if (XY.ShowDialog() == DialogResult.OK)
+            {
+                btnXY.BackColor = XY.Color;
+                blackThick = new Pen(XY.Color, 2);
+                blackThin = new Pen(XY.Color, 1);
+            }
         }
     }
 }
