@@ -321,9 +321,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Dokumentacja";
             this.Text = "Dokumentacja";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dokumentacja_FormClosing);
+            this.Load += new System.EventHandler(this.Dokumentacja_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);

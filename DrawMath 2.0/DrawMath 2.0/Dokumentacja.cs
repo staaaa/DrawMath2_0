@@ -31,5 +31,10 @@ namespace DrawMath_2._0
         {
             Environment.Exit(0);
         }
+
+        private void Dokumentacja_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

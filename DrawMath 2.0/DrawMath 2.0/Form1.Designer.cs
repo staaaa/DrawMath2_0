@@ -604,6 +604,7 @@ namespace DrawMath_2._0
             this.Controls.Add(this.fBox);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "DrawMath 2.0";
             this.Load += new System.EventHandler(this.Form1_Load);
