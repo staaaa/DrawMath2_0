@@ -87,7 +87,8 @@ namespace DrawMath_2._0
             var trygFunc = checkTrygFunc();
             await drawFunction(Points, point1, point2, trygFunc, grap, fDane);
             //DANE O FUNKCJI
-            txtOy.Text = fDane.Oy.ToString();
+            double dokladnoscPrzeciecia = Convert.ToDouble(fDane.Oy.ToString());
+            txtOy.Text = Math.Round(dokladnoscPrzeciecia, 5).ToString();
             checkSwitchMonot(fDane);
             await fDane.countMiejscaZerowe(przedzial, przedzial[0]);
             txtZerowe.Text = "";
@@ -99,13 +100,14 @@ namespace DrawMath_2._0
             string txtGraniceNaKoncach = "";
             foreach (double x in fDane.graniceNaKoncach)
             {
-                txtGraniceNaKoncach += Math.Round(x, 2).ToString() + ", ";
+                txtGraniceNaKoncach += Math.Round(x, 2).ToString() + "; ";
             }
             txtGraniceKoniec.Text = txtGraniceNaKoncach;
             txtEkstrema.Text = "Max: " + fDane.ekst.max + ", Min: " + fDane.ekst.min;
             if (fDane.dziedzinaFunkcji.Count() == 0)
             {
-                txtDziedzina.Text = "Wszystkie liczby rzeczywiste";
+                txtDziedzina.Text = @"Wszystkie
+liczby rzeczywiste";
             }
             else
             {
@@ -114,7 +116,9 @@ namespace DrawMath_2._0
                 {
                     allX += x.ToString() + ", ";
                 }
-                txtDziedzina.Text = "Rzeczywiste z wyłączeniem { " + allX + " }";
+                txtDziedzina.Text = @"Rzeczywiste 
+z wyłączeniem 
+{ " + allX + " }";
             }
             txtPochodna.Text = Math.Round(Convert.ToDouble(fDane.pochodna), 4).ToString();
             MessageBox.Show("WYKRES NARYSOWANY!", "Uwaga!", MessageBoxButtons.OK, MessageBoxIcon.Information);

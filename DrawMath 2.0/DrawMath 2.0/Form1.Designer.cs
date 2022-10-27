@@ -288,7 +288,7 @@ namespace DrawMath_2._0
             // 
             this.txtZerowe.AutoSize = true;
             this.txtZerowe.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtZerowe.Location = new System.Drawing.Point(340, 695);
+            this.txtZerowe.Location = new System.Drawing.Point(831, 595);
             this.txtZerowe.Name = "txtZerowe";
             this.txtZerowe.Size = new System.Drawing.Size(0, 20);
             this.txtZerowe.TabIndex = 29;
@@ -297,7 +297,7 @@ namespace DrawMath_2._0
             // 
             this.txtGraniceKoniec.AutoSize = true;
             this.txtGraniceKoniec.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtGraniceKoniec.Location = new System.Drawing.Point(813, 675);
+            this.txtGraniceKoniec.Location = new System.Drawing.Point(831, 676);
             this.txtGraniceKoniec.Name = "txtGraniceKoniec";
             this.txtGraniceKoniec.Size = new System.Drawing.Size(0, 20);
             this.txtGraniceKoniec.TabIndex = 31;
@@ -407,7 +407,7 @@ namespace DrawMath_2._0
             // 
             this.txtDziedzina.AutoSize = true;
             this.txtDziedzina.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDziedzina.Location = new System.Drawing.Point(671, 595);
+            this.txtDziedzina.Location = new System.Drawing.Point(414, 698);
             this.txtDziedzina.Name = "txtDziedzina";
             this.txtDziedzina.Size = new System.Drawing.Size(0, 20);
             this.txtDziedzina.TabIndex = 61;
@@ -416,7 +416,7 @@ namespace DrawMath_2._0
             // 
             this.txtEkstrema.AutoSize = true;
             this.txtEkstrema.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEkstrema.Location = new System.Drawing.Point(760, 555);
+            this.txtEkstrema.Location = new System.Drawing.Point(414, 550);
             this.txtEkstrema.Name = "txtEkstrema";
             this.txtEkstrema.Size = new System.Drawing.Size(0, 20);
             this.txtEkstrema.TabIndex = 60;
@@ -426,7 +426,7 @@ namespace DrawMath_2._0
             // 
             this.txtGranicaPunkt.AutoSize = true;
             this.txtGranicaPunkt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtGranicaPunkt.Location = new System.Drawing.Point(678, 635);
+            this.txtGranicaPunkt.Location = new System.Drawing.Point(831, 635);
             this.txtGranicaPunkt.Name = "txtGranicaPunkt";
             this.txtGranicaPunkt.Size = new System.Drawing.Size(0, 20);
             this.txtGranicaPunkt.TabIndex = 59;
@@ -435,7 +435,7 @@ namespace DrawMath_2._0
             // 
             this.txtMonotPrzedzial.AutoSize = true;
             this.txtMonotPrzedzial.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMonotPrzedzial.Location = new System.Drawing.Point(410, 635);
+            this.txtMonotPrzedzial.Location = new System.Drawing.Point(414, 655);
             this.txtMonotPrzedzial.Name = "txtMonotPrzedzial";
             this.txtMonotPrzedzial.Size = new System.Drawing.Size(0, 20);
             this.txtMonotPrzedzial.TabIndex = 58;
@@ -445,7 +445,7 @@ namespace DrawMath_2._0
             // 
             this.txtMonot.AutoSize = true;
             this.txtMonot.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMonot.Location = new System.Drawing.Point(394, 595);
+            this.txtMonot.Location = new System.Drawing.Point(414, 595);
             this.txtMonot.Name = "txtMonot";
             this.txtMonot.Size = new System.Drawing.Size(0, 20);
             this.txtMonot.TabIndex = 57;
@@ -454,7 +454,7 @@ namespace DrawMath_2._0
             // 
             this.txtOy.AutoSize = true;
             this.txtOy.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtOy.Location = new System.Drawing.Point(420, 555);
+            this.txtOy.Location = new System.Drawing.Point(831, 550);
             this.txtOy.Name = "txtOy";
             this.txtOy.Size = new System.Drawing.Size(0, 20);
             this.txtOy.TabIndex = 56;
@@ -463,7 +463,7 @@ namespace DrawMath_2._0
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(540, 595);
+            this.label14.Location = new System.Drawing.Point(212, 698);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(125, 20);
             this.label14.TabIndex = 55;
@@ -473,17 +473,17 @@ namespace DrawMath_2._0
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(540, 555);
+            this.label13.Location = new System.Drawing.Point(214, 547);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(207, 20);
+            this.label13.Size = new System.Drawing.Size(124, 40);
             this.label13.TabIndex = 54;
-            this.label13.Text = "Ekstrema funkcji w przedziale:";
+            this.label13.Text = "Ekstrema funkcji  \r\nw przedziale:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(540, 675);
+            this.label12.Location = new System.Drawing.Point(553, 676);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(273, 20);
             this.label12.TabIndex = 53;
@@ -493,7 +493,7 @@ namespace DrawMath_2._0
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(540, 635);
+            this.label11.Location = new System.Drawing.Point(553, 635);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(132, 20);
             this.label11.TabIndex = 52;
@@ -503,7 +503,7 @@ namespace DrawMath_2._0
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(220, 695);
+            this.label10.Location = new System.Drawing.Point(553, 595);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(114, 20);
             this.label10.TabIndex = 51;
@@ -513,7 +513,7 @@ namespace DrawMath_2._0
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(220, 635);
+            this.label9.Location = new System.Drawing.Point(214, 635);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(184, 40);
             this.label9.TabIndex = 50;
@@ -523,7 +523,7 @@ namespace DrawMath_2._0
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(220, 595);
+            this.label8.Location = new System.Drawing.Point(214, 595);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(168, 20);
             this.label8.TabIndex = 49;
@@ -533,7 +533,7 @@ namespace DrawMath_2._0
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(220, 555);
+            this.label15.Location = new System.Drawing.Point(553, 550);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(184, 20);
             this.label15.TabIndex = 48;
@@ -543,7 +543,7 @@ namespace DrawMath_2._0
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(540, 710);
+            this.label16.Location = new System.Drawing.Point(553, 710);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(124, 20);
             this.label16.TabIndex = 62;
@@ -553,7 +553,7 @@ namespace DrawMath_2._0
             // 
             this.txtPochodna.AutoSize = true;
             this.txtPochodna.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPochodna.Location = new System.Drawing.Point(665, 710);
+            this.txtPochodna.Location = new System.Drawing.Point(831, 710);
             this.txtPochodna.Name = "txtPochodna";
             this.txtPochodna.Size = new System.Drawing.Size(0, 20);
             this.txtPochodna.TabIndex = 63;
