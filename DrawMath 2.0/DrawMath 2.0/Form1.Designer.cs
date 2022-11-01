@@ -53,12 +53,15 @@ namespace DrawMath_2._0
             this.txtZerowe = new System.Windows.Forms.Label();
             this.txtGraniceKoniec = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDziedzina = new System.Windows.Forms.Label();
             this.txtEkstrema = new System.Windows.Forms.Label();
@@ -78,15 +81,16 @@ namespace DrawMath_2._0
             this.txtPochodna = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fBox)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // fBox
             // 
-            this.fBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
-            this.fBox.Location = new System.Drawing.Point(206, 20);
+            this.fBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.fBox.Location = new System.Drawing.Point(214, 20);
             this.fBox.Name = "fBox";
             this.fBox.Size = new System.Drawing.Size(507, 506);
             this.fBox.TabIndex = 0;
@@ -94,10 +98,10 @@ namespace DrawMath_2._0
             // 
             // txtBoxPochodna
             // 
-            this.txtBoxPochodna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
+            this.txtBoxPochodna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.txtBoxPochodna.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxPochodna.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxPochodna.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.txtBoxPochodna.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtBoxPochodna.Location = new System.Drawing.Point(740, 45);
             this.txtBoxPochodna.Multiline = true;
             this.txtBoxPochodna.Name = "txtBoxPochodna";
@@ -106,10 +110,10 @@ namespace DrawMath_2._0
             // 
             // txtBoxMonot1
             // 
-            this.txtBoxMonot1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
+            this.txtBoxMonot1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.txtBoxMonot1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxMonot1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxMonot1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.txtBoxMonot1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtBoxMonot1.Location = new System.Drawing.Point(740, 115);
             this.txtBoxMonot1.Multiline = true;
             this.txtBoxMonot1.Name = "txtBoxMonot1";
@@ -118,10 +122,10 @@ namespace DrawMath_2._0
             // 
             // txtBoxMonot2
             // 
-            this.txtBoxMonot2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
+            this.txtBoxMonot2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.txtBoxMonot2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxMonot2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxMonot2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.txtBoxMonot2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtBoxMonot2.Location = new System.Drawing.Point(740, 190);
             this.txtBoxMonot2.Multiline = true;
             this.txtBoxMonot2.Name = "txtBoxMonot2";
@@ -130,10 +134,10 @@ namespace DrawMath_2._0
             // 
             // txtBoxGranica
             // 
-            this.txtBoxGranica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
+            this.txtBoxGranica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.txtBoxGranica.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxGranica.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxGranica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.txtBoxGranica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtBoxGranica.Location = new System.Drawing.Point(740, 265);
             this.txtBoxGranica.Multiline = true;
             this.txtBoxGranica.Name = "txtBoxGranica";
@@ -142,10 +146,10 @@ namespace DrawMath_2._0
             // 
             // txtBoxInput
             // 
-            this.txtBoxInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
+            this.txtBoxInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.txtBoxInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxInput.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.txtBoxInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtBoxInput.Location = new System.Drawing.Point(740, 370);
             this.txtBoxInput.Multiline = true;
             this.txtBoxInput.Name = "txtBoxInput";
@@ -156,6 +160,7 @@ namespace DrawMath_2._0
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label1.Location = new System.Drawing.Point(740, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 15);
@@ -165,6 +170,7 @@ namespace DrawMath_2._0
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label2.Location = new System.Drawing.Point(740, 90);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -175,6 +181,7 @@ namespace DrawMath_2._0
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label3.Location = new System.Drawing.Point(740, 240);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(222, 15);
@@ -184,6 +191,7 @@ namespace DrawMath_2._0
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label4.Location = new System.Drawing.Point(740, 345);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 15);
@@ -192,10 +200,10 @@ namespace DrawMath_2._0
             // 
             // BoxDokladnosc
             // 
-            this.BoxDokladnosc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
+            this.BoxDokladnosc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.BoxDokladnosc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BoxDokladnosc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BoxDokladnosc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.BoxDokladnosc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.BoxDokladnosc.FormattingEnabled = true;
             this.BoxDokladnosc.Items.AddRange(new object[] {
             "Mała dokładność",
@@ -209,6 +217,7 @@ namespace DrawMath_2._0
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label5.Location = new System.Drawing.Point(740, 415);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 15);
@@ -217,11 +226,11 @@ namespace DrawMath_2._0
             // 
             // btnDraw
             // 
-            this.btnDraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
+            this.btnDraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.btnDraw.FlatAppearance.BorderSize = 0;
             this.btnDraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDraw.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDraw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(224)))));
+            this.btnDraw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.btnDraw.Location = new System.Drawing.Point(740, 488);
             this.btnDraw.Name = "btnDraw";
             this.btnDraw.Size = new System.Drawing.Size(100, 32);
@@ -232,11 +241,11 @@ namespace DrawMath_2._0
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(224)))));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.button2.Location = new System.Drawing.Point(860, 488);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 32);
@@ -288,6 +297,7 @@ namespace DrawMath_2._0
             // 
             this.txtZerowe.AutoSize = true;
             this.txtZerowe.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtZerowe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtZerowe.Location = new System.Drawing.Point(831, 595);
             this.txtZerowe.Name = "txtZerowe";
             this.txtZerowe.Size = new System.Drawing.Size(0, 20);
@@ -297,6 +307,7 @@ namespace DrawMath_2._0
             // 
             this.txtGraniceKoniec.AutoSize = true;
             this.txtGraniceKoniec.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGraniceKoniec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtGraniceKoniec.Location = new System.Drawing.Point(831, 676);
             this.txtGraniceKoniec.Name = "txtGraniceKoniec";
             this.txtGraniceKoniec.Size = new System.Drawing.Size(0, 20);
@@ -304,98 +315,131 @@ namespace DrawMath_2._0
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(189)))), ((int)(((byte)(175)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 764);
+            this.panel1.Size = new System.Drawing.Size(200, 761);
             this.panel1.TabIndex = 34;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.button1);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 350);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 50);
+            this.panel7.TabIndex = 68;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.button1.Location = new System.Drawing.Point(60, 320);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.Size = new System.Drawing.Size(200, 50);
             this.button1.TabIndex = 67;
             this.button1.Text = "Zamknij";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox3
+            // panel6
             // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Location = new System.Drawing.Point(20, 320);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 66;
-            this.pictureBox3.TabStop = false;
+            this.panel6.Controls.Add(this.button4);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 300);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 50);
+            this.panel6.TabIndex = 68;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.button4.Location = new System.Drawing.Point(60, 260);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 40);
+            this.button4.Size = new System.Drawing.Size(200, 50);
             this.button4.TabIndex = 65;
             this.button4.Text = "Dokumentacja";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // pictureBox2
+            // panel5
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 260);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 64;
-            this.pictureBox2.TabStop = false;
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 250);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 50);
+            this.panel5.TabIndex = 68;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.button3.Location = new System.Drawing.Point(60, 200);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 40);
+            this.button3.Size = new System.Drawing.Size(200, 50);
             this.button3.TabIndex = 63;
             this.button3.Text = "Strona Główna";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // panel4
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 200);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 62;
-            this.pictureBox1.TabStop = false;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 200);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 50);
+            this.panel4.TabIndex = 68;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 200);
+            this.panel2.TabIndex = 64;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 200);
+            this.panel3.TabIndex = 52;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label7.Location = new System.Drawing.Point(740, 165);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -407,6 +451,7 @@ namespace DrawMath_2._0
             // 
             this.txtDziedzina.AutoSize = true;
             this.txtDziedzina.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDziedzina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtDziedzina.Location = new System.Drawing.Point(414, 698);
             this.txtDziedzina.Name = "txtDziedzina";
             this.txtDziedzina.Size = new System.Drawing.Size(0, 20);
@@ -416,6 +461,7 @@ namespace DrawMath_2._0
             // 
             this.txtEkstrema.AutoSize = true;
             this.txtEkstrema.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtEkstrema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtEkstrema.Location = new System.Drawing.Point(414, 550);
             this.txtEkstrema.Name = "txtEkstrema";
             this.txtEkstrema.Size = new System.Drawing.Size(0, 20);
@@ -426,6 +472,7 @@ namespace DrawMath_2._0
             // 
             this.txtGranicaPunkt.AutoSize = true;
             this.txtGranicaPunkt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGranicaPunkt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtGranicaPunkt.Location = new System.Drawing.Point(831, 635);
             this.txtGranicaPunkt.Name = "txtGranicaPunkt";
             this.txtGranicaPunkt.Size = new System.Drawing.Size(0, 20);
@@ -435,6 +482,7 @@ namespace DrawMath_2._0
             // 
             this.txtMonotPrzedzial.AutoSize = true;
             this.txtMonotPrzedzial.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMonotPrzedzial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtMonotPrzedzial.Location = new System.Drawing.Point(414, 655);
             this.txtMonotPrzedzial.Name = "txtMonotPrzedzial";
             this.txtMonotPrzedzial.Size = new System.Drawing.Size(0, 20);
@@ -445,6 +493,7 @@ namespace DrawMath_2._0
             // 
             this.txtMonot.AutoSize = true;
             this.txtMonot.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMonot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtMonot.Location = new System.Drawing.Point(414, 595);
             this.txtMonot.Name = "txtMonot";
             this.txtMonot.Size = new System.Drawing.Size(0, 20);
@@ -454,6 +503,7 @@ namespace DrawMath_2._0
             // 
             this.txtOy.AutoSize = true;
             this.txtOy.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtOy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtOy.Location = new System.Drawing.Point(831, 550);
             this.txtOy.Name = "txtOy";
             this.txtOy.Size = new System.Drawing.Size(0, 20);
@@ -463,6 +513,7 @@ namespace DrawMath_2._0
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label14.Location = new System.Drawing.Point(212, 698);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(125, 20);
@@ -473,6 +524,7 @@ namespace DrawMath_2._0
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label13.Location = new System.Drawing.Point(214, 547);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(124, 40);
@@ -483,6 +535,7 @@ namespace DrawMath_2._0
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label12.Location = new System.Drawing.Point(553, 676);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(273, 20);
@@ -493,6 +546,7 @@ namespace DrawMath_2._0
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label11.Location = new System.Drawing.Point(553, 635);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(132, 20);
@@ -503,6 +557,7 @@ namespace DrawMath_2._0
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label10.Location = new System.Drawing.Point(553, 595);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(114, 20);
@@ -513,6 +568,7 @@ namespace DrawMath_2._0
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label9.Location = new System.Drawing.Point(214, 635);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(184, 40);
@@ -523,6 +579,7 @@ namespace DrawMath_2._0
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label8.Location = new System.Drawing.Point(214, 595);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(168, 20);
@@ -533,6 +590,7 @@ namespace DrawMath_2._0
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label15.Location = new System.Drawing.Point(553, 550);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(184, 20);
@@ -543,6 +601,7 @@ namespace DrawMath_2._0
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.label16.Location = new System.Drawing.Point(553, 710);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(124, 20);
@@ -553,6 +612,7 @@ namespace DrawMath_2._0
             // 
             this.txtPochodna.AutoSize = true;
             this.txtPochodna.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPochodna.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.txtPochodna.Location = new System.Drawing.Point(831, 710);
             this.txtPochodna.Name = "txtPochodna";
             this.txtPochodna.Size = new System.Drawing.Size(0, 20);
@@ -562,7 +622,7 @@ namespace DrawMath_2._0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(984, 761);
             this.Controls.Add(this.txtPochodna);
             this.Controls.Add(this.label16);
@@ -610,9 +670,10 @@ namespace DrawMath_2._0
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fBox)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,14 +719,17 @@ namespace DrawMath_2._0
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label txtPochodna;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
     }
 }
 
