@@ -41,5 +41,10 @@ namespace DrawMath_2._0
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

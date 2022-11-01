@@ -408,5 +408,24 @@ z wyłączeniem
                 blackThin = new Pen(XY.Color, 1);
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form1 home = new Form1();
+            home.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Dokumentacja docs = new Dokumentacja();
+            docs.Show();
+            this.Hide();
+        }
     }
 }
